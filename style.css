@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --hoverVDC: hsla(183, 100%, 15%, 0.801);
+    --Very_dark_cyan: hsl(183, 100%, 15%);
+    --Dark_grayish_cyan: hsl(186, 14%, 43%);
+    --Grayish_cyan: hsl(184, 14%, 56%);
+    --Light_grayish_cyan: hsl(185, 41%, 84%);
+    --Very_light_grayish_cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Inpgray: rgba(222, 241, 247, 0.582);
+    --green: rgb(25, 170, 134);
+    --green_select: rgb(144, 230, 208);
+}
+
+body {
+    background-color: var(--Light_grayish_cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Space Mono', monospace;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    float: bottom;
+    margin-bottom: 80px;
+}
+
+.main {
+    background-color: var(--White);
+    width: 850px;
+    height: 450px;
+    border-radius: 25px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    border: 30px solid var(--White);
+    box-shadow: 2px 1px 10px 3px var(--Dark_grayish_cyan);
+}
+
+.sec_white {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sec_white span {
+    color: var(--Dark_grayish_cyan);
+}
+
+.sec_green {
+    background-color: var(--Very_dark_cyan);
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sec_green span {
+    color: var(--White);
+    font-size: 20px;
+}
+
+.sec_green span::after {
+    content: "/person";
+    display: block;
+    color: var(--Inpgray);
+    font-size: 15px;
+}
+
+.sec_green p {
+    color: var(--green);
+    font-size: 50px;
+}
+.sec_green p::before{
+    content: "$";
+    color: var(--green);
+}
+
+.inp_bill,
+.inp_peaple {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    user-select: none;
+}
+
+.inp_bill:focus-within,
+.inp_peaple:focus-within {
+    border: 2px solid var(--green);
+}
+
+.inp_bill {
+    background-color: var(--Inpgray);
+    height: 40px;
+    border-radius: 5px;
+}
+
+.inp_peaple {
+    background-color: var(--Inpgray);
+    height: 40px;
+    border-radius: 5px;
+}
+
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input {
+    float: right;
+    width: 92%;
+    outline: none;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 10px;
+    color: transparent;
+    text-shadow: 0 0 0 var(--Very_dark_cyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    border: none;
+}
+
+.inp_tip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.inp_tip input {
+    width: 115px;
+    height: 40px;
+    appearance: none;
+}
+
+.inp_tip input::before {
+    content: attr(value)"%";
+    width: 115px;
+    height: 40px;
+    background-color: var(--Very_dark_cyan);
+    display: block;
+    color: var(--White);
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inp_tip input:hover::before {
+    background-color: var(--hoverVDC);
+}
+
+.inp_tip input:checked::before {
+    background-color: var(--green_select);
+    color: var(--Very_dark_cyan);
+}
+
+.custom {
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--Inpgray);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Space Mono', monospace;
+    color: var(--Very_dark_cyan);
+}
+.custom::placeholder {
+    color: var(--Very_dark_cyan);
+}
+
+.custom:focus::placeholder {
+    text-align: right;
+    color: transparent;
+}
+
+.custom:focus {
+    text-align: right;
+    padding-right: 10px;
+    border: 2px solid green;
+    color: var(--Very_dark_cyan);
+}
+
+.INPS {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.green_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.reset {
+    width: 300px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--green);
+    color: var(--Very_dark_cyan);
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: var(--green_select);
+}
+
+@media (max-width:920px) {
+    .main {
+        width: 100%;
+        height: 85%;
+        min-height: 800px;
+        border-radius: 25px 25px 0 0;
+        flex-direction: column;
+        min-width: 340px;
+        padding-top: 10px;
+    }
+
+    .sec_white,
+    .sec_green {
+        width: 320px;
+        min-width: 320px;
+    }
+
+    .sec_white {
+        height: 60%;
+        min-height: 440px;
+    }
+
+    .sec_green {
+        height: 40%;
+        justify-content: center;
+        gap: 40px;
+        min-height: 250px;
+        white-space: nowrap
+    }
+
+    .header {
+        height: 15%;
+        min-height: 130px;
+        margin: 0px;
+        padding-top: 40px;
+    }
+
+    body {
+        display: block;
+    }
+
+    .inp_tip input::before,
+    .inp_tip input {
+        width: 150px;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .inp_bill,
+    .inp_peaple {
+        height: 45px;
+    }
+
+    .sec_green span {
+        font-size: 15px;
+    }
+
+    .sec_green span::after {
+        font-size: 13px;
+    }
+
+    .sec_green p {
+        font-size: 30px;
+    }
+
+    .green_div {
+        justify-content: space-between;
+        width: 270px;
+    }
+
+    .reset {
+        width: 270px;
+    }
+
+    .div_gap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .custom::placeholder{
+        font-size: 16px;
+    }
+}

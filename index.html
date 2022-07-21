@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator app
+    </title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./images/logo.svg" alt="Splitter icon">
+    </header>
+    <main class="main">
+        <section class="sec_white">
+            <div class="INPS">
+                <span class="span_bill">Bill</span>
+                <div class="inp_bill">
+                    <img src="./images/icon-dollar.svg" alt="icon-dollar">
+                    <input type="number" class="input" id="dolar_inp">
+                </div>
+            </div>
+
+            <div class="INPS">
+                <span class="span_tip">Select Tip %</span>
+                <div class="inp_tip">
+                    <input type="radio" name="tip" value="5" class="radiobtn">
+                    <input type="radio" name="tip" value="10" class="radiobtn">
+                    <input type="radio" name="tip" value="15" class="radiobtn">
+                    <input type="radio" name="tip" value="25" class="radiobtn">
+                    <input type="radio" name="tip" value="50" class="radiobtn">
+                    <input type="text" placeholder="Custom" class="custom">
+                </div>
+            </div>
+
+            <div class="INPS">
+                <span class="span_peaple">Number of People</span>
+                <div class="inp_peaple">
+                    <img src="./images/icon-person.svg" alt="icon-person">
+                    <input type="number" class="input" id="peaple_inp">
+                </div>
+            </div>
+        </section>
+        <section class="sec_green">
+            <div class="div_gap">
+                <div class="green_div">
+                    <span>Tip Amount</span>
+                    <p class="p_amount">0,00</p>
+                </div>
+
+                <div class="green_div">
+                    <span>Total</span>
+                    <p class="p_total">0,00</p>
+                </div>
+            </div>
+
+            <button class="reset" onclick="reset()">RESET</button>
+        </section>
+    </main>
+</body>
+
+</html>
