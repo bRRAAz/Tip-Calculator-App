@@ -101,7 +101,7 @@ body {
 
 .sec_green p {
     color: var(--green);
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .sec_green p::before {
@@ -312,7 +312,7 @@ body {
     }
 
     .sec_green p {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .green_div {
