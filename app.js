@@ -50,12 +50,16 @@ function total(inp) {
     if(totalComplete.toString().length > 8){
         p_total.innerHTML = "ERRO"
         window.alert("O Número do TOTAL foi maior do que o supotado pelo site");
+        reset()
+        return
     }else{
         p_total.innerHTML = `${totalComplete}`
     }
     if(amountComplete.toString().length > 8){
         p_amount.innerHTML = "ERRO"
         window.alert("O Número da GORJETA foi maior do que o supotado pelo site");
+        reset()
+        return
     }else{
         p_amount.innerHTML = `${amountComplete}`
     }
