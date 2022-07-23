@@ -18,6 +18,7 @@
     --Inpgray: rgba(222, 241, 247, 0.582);
     --green: rgb(25, 170, 134);
     --green_select: rgb(144, 230, 208);
+    --orange :rgb(231, 114, 67);;
 }
 
 body,
@@ -28,7 +29,8 @@ body,
 .inp_peaple,
 .inp_tip,
 .INPS,
-.green_div {
+.green_div,
+.INPS_span {
     display: flex;
 }
 
@@ -109,10 +111,10 @@ body {
 
 .inp_bill,
 .inp_peaple {
-
     justify-content: end;
     align-items: center;
     user-select: none;
+    border: none;
 }
 
 .inp_bill:focus-within,
@@ -143,8 +145,7 @@ body {
     background-color: transparent;
     text-align: right;
     padding-right: 10px;
-    color: transparent;
-    text-shadow: 0 0 0 var(--Very_dark_cyan);
+    color: var(--Very_dark_cyan);
     font-family: 'Space Mono', monospace;
     font-size: 24px;
     border: none;
@@ -216,6 +217,13 @@ body {
 .INPS {
     flex-direction: column;
     gap: 10px;
+}
+.INPS_span{
+    justify-content: space-between;
+}
+.cant{
+    color: var(--orange);
+    display: none;
 }
 
 .green_div {
