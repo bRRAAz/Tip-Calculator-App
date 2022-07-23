@@ -20,9 +20,20 @@
     --green_select: rgb(144, 230, 208);
 }
 
+body,
+.main,
+.sec_white,
+.sec_green,
+.inp_bill,
+.inp_peaple,
+.inp_tip,
+.INPS,
+.green_div {
+    display: flex;
+}
+
 body {
     background-color: var(--Light_grayish_cyan);
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -43,7 +54,6 @@ body {
     height: 450px;
     border-radius: 25px;
     margin-bottom: 100px;
-    display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 40px;
@@ -55,7 +65,6 @@ body {
 .sec_white {
     width: 50%;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
@@ -70,7 +79,7 @@ body {
     width: 50%;
     height: 100%;
     border-radius: 15px;
-    display: flex;
+
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -92,14 +101,15 @@ body {
     color: var(--green);
     font-size: 50px;
 }
-.sec_green p::before{
+
+.sec_green p::before {
     content: "$";
     color: var(--green);
 }
 
 .inp_bill,
 .inp_peaple {
-    display: flex;
+
     justify-content: end;
     align-items: center;
     user-select: none;
@@ -141,7 +151,6 @@ body {
 }
 
 .inp_tip {
-    display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: space-between;
@@ -187,6 +196,7 @@ body {
     font-family: 'Space Mono', monospace;
     color: var(--Very_dark_cyan);
 }
+
 .custom::placeholder {
     color: var(--Very_dark_cyan);
 }
@@ -204,13 +214,12 @@ body {
 }
 
 .INPS {
-    display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .green_div {
-    display: flex;
+
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -312,7 +321,8 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-    .custom::placeholder{
+
+    .custom::placeholder {
         font-size: 16px;
     }
 }
