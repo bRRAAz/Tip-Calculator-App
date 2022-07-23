@@ -72,9 +72,9 @@ function call() {
 
     radio = document.querySelector(".radiobtn[name='tip']:checked")
     
-    if (custom_input.value != "" && dolarinput.value > 1 && peaple_input.value > 1) {
+    if (custom_input.value != "" && dolarinput.value > 0 && peaple_input.value > 0) {
         total(custom_input)
-    } else if (dolarinput.value > 1 && peaple_input.value > 1 && radio.value > 1) {
+    } else if (dolarinput.value > 0 && peaple_input.value > 0 && radio.value > 1) {
         total(radio)
     }
 }
